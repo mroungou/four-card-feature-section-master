@@ -1,0 +1,55 @@
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+// primary colors
+
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180,62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+// neutral
+$veryDarkBlue: hsl(234, 12%, 34%);
+$grayishBlue: hsl(229, 6%, 66%);
+$veryLightGray: hsl(0,0%, 98%);
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: $veryDarkBlue;
+    background-color: $veryLightGray;
+}
+
+.main-ad {
+    h1 {
+        font-weight: 200;
+        color: $veryDarkBlue;
+        text-align: center;
+        font-size: 1.75rem;
+
+        .bold {
+            font-weight: 600;
+            display: block;
+        }
+
+    }
+
+    p {
+        text-align: center;
+        padding: 0 1.5rem;
+    }
+}
+
+.container {
+    display: grid;
+    grid-template-rows: auto;
+    padding: 0 1.25rem;
+
+    .supervisor {
+        border: 1px solid $veryLightGray;
+        border-top: 5px solid $cyan;
+        border-radius: 10px;
+        padding: 0 1rem;
+        background-color: white;
+    }
+}
