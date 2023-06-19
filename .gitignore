@@ -10,7 +10,6 @@
 #######################################################
 *.xd
 *.fig
-README.md
 style-guide.md
 design
 # Avoid your project being littered with annoying .DS_Store files!
