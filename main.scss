@@ -1,5 +1,3 @@
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
 
 // primary colors
 
@@ -44,9 +42,10 @@ main {
         }
 
         img {
-            float: right;
+            // float: right;
             padding-top: 1rem;
             padding-bottom: 1.25rem;
+            padding: 1rem 0rem 1.55rem 13.25rem;
         }
 
 }
@@ -103,5 +102,114 @@ main {
         @include ads;
         margin-top: 2rem;
         border-top: 5px solid $blue;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+
+    .main-ad {
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+            padding: 0 26rem;
+        }
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        // grid-template-rows: auto auto;
+        // grid-template-areas: 
+        //     "supervisor     team    calculator"
+        //     "supervisor     karma   calculator";
+        //     // "supervisor      karma          calculator";
+        
+        // .supervisor {
+        //     grid-area: supervisor;
+        // }
+        // .team-builder {
+        //     grid-area: team;
+        // }
+        // .karma {
+        //     grid-area: karma;
+        // }
+
+        // .calculator {
+        //     grid-area: calculator;
+        // }
+
+        .karma, 
+        .team-builder, 
+        .calculator {
+            margin-top: 0;
+        }
+
+        .card {
+            width: 85%;
+            height: 300px;
+            // justify-self: center;
+            // align-self: center;
+            
+            img {
+                padding: 6rem 0rem 1.55rem 19rem;
+            }
+            
+        }
+
+        .card:nth-child(1) {
+            grid-column: 1;
+        }
+
+        .card:nth-child(2), 
+        .card:nth-child(3) {
+            grid-column: 2;
+        }
+
+        .card:nth-child(4) {
+            grid-column: 3;
+        }
+
+        .column1, .column3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .column2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .supervisor {
+            p, h2 {
+                padding: 0 1.5rem;
+            }
+        }
+        .team-builder {
+            margin-bottom: 0.75rem;
+            p, h2 {
+                padding: 0 1.5rem;
+            }
+        }
+        .karma {
+            margin-top: 0.75rem;
+            p, h2 {
+                padding: 0 1.5rem;
+            }
+        }
+
+        .calculator {
+            p, h2 {
+                padding: 0 1.5rem;
+            }
+            img {
+                bottom: 0;
+            }
+        }
     }
 }
